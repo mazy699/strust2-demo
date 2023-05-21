@@ -20,6 +20,7 @@
         </action>
         <action name="loginShow" class="com.example.strust2demo.LoginShowAction">
             <result name="success">/WEB-INF/jsp/show.jsp</result>
+            <result name="error">/WEB-INF/jsp/login.jsp</result>
         </action>
     </package>
 </struts>

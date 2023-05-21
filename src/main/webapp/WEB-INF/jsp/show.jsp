@@ -14,7 +14,7 @@
   <title>Title</title>
 </head>
 <body>
-姓名：${userName}
+欢迎<span style="color:red">${username}</span>
 </body>
 </html>
 

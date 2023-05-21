@@ -16,16 +16,18 @@
 <body>
 <form action="loginShow.action" method="post">
   <div>
-    <label>用户名：</label>
-    <input type="text" name="userName" />
+    <span style="color:red">${errors}</span><br>
+    <span style="display:inline-block;text-align:right;width:65px;">
+      用户名：
+    </span>
+    <input type="text" name="username" value="${username}"/><br>
+    <span style="display:inline-block;text-align:right;width:65px;">
+      密码：
+    </span>
+    <input type="password" name="password" />
   </div>
-  <div>
+  <div style="margin-top: 10px;width: 250px;text-align: right;">
     <input  type="submit"  value="提交" />
-  </div>
-  <div>
-    <table border="1">
-
-    </table>
   </div>
 </form>
 </body>
