@@ -2,17 +2,10 @@ package com.example.strust2demo;
 
 import com.example.bean.LoginUser;
 import com.opensymphony.xwork2.Action;
+import com.opensymphony.xwork2.ModelDriven;
 
-public class LoginShowAction implements Action {
+public class LoginShowAction implements Action, ModelDriven<LoginUser> {
     private LoginUser loginUser;
-
-    public LoginUser getLoginUser() {
-        return loginUser;
-    }
-
-    public void setLoginUser(LoginUser loginUser) {
-        this.loginUser = loginUser;
-    }
 
     @Override
     public String execute() {
@@ -23,5 +16,12 @@ public class LoginShowAction implements Action {
             loginUser.setErrors("用户名或密码错误");
             return ERROR;
         }
+    }
+
+    @Override
+    public LoginUser getModel() {
+        if (this.loginUser == null)
+            loginUser = new LoginUser();
+        return loginUser;
     }
 }
