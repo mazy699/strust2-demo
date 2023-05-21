@@ -14,7 +14,8 @@
   <title>Title</title>
 </head>
 <body>
-欢迎<span style="color:red">${username}</span>
+欢迎<span style="color:red">${loginUserlist[0].username}</span><br>
+欢迎<span style="color:red">${loginUserlist[1].username}</span>
 </body>
 </html>
 

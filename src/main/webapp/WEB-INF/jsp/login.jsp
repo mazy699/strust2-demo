@@ -16,15 +16,26 @@
 <body>
 <form action="loginShow.action" method="post">
   <div>
-    <span style="color:red">${errors}</span><br>
+    <span style="color:red">${loginUserlist[0].errors}</span><br>
     <span style="display:inline-block;text-align:right;width:65px;">
       用户名：
     </span>
-    <input type="text" name="username" value="${username}"/><br>
+    <input type="text" name="loginUserlist[0].username" value="${loginUserlist[0].username}"/><br>
     <span style="display:inline-block;text-align:right;width:65px;">
       密码：
     </span>
-    <input type="password" name="password" />
+    <input type="password" name="loginUserlist[0].password" />
+  </div>
+  <div>
+    <span style="color:red">${loginUserlist[1].errors}</span><br>
+    <span style="display:inline-block;text-align:right;width:65px;">
+      用户名：
+    </span>
+    <input type="text" name="loginUserlist[1].username" value="${loginUserlist[1].username}"/><br>
+    <span style="display:inline-block;text-align:right;width:65px;">
+      密码：
+    </span>
+    <input type="password" name="loginUserlist[1].password" />
   </div>
   <div style="margin-top: 10px;width: 250px;text-align: right;">
     <input  type="submit"  value="提交" />
