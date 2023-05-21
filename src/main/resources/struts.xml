@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="defaultPackage" namespace="/" extends="struts-default">
+        <action name="hello-strust" class="com.example.strust2demo.HelloStrust" method="hello">
+            <result name="success">/WEB-INF/jsp/success.jsp</result>
+        </action>
+        <action name="userDisplay" class="com.example.strust2demo.UserDisplayAction" method="execute">
+            <result name="success">/WEB-INF/jsp/user-display.jsp</result>
+        </action>
+        <action name="userConfirm" class="com.example.strust2demo.UserConfirmAction" method="execute">
+            <result name="success">/WEB-INF/jsp/user-show.jsp</result>
+        </action>
+        <action name="login" class="com.example.strust2demo.LoginAction">
+            <result name="success">/WEB-INF/jsp/login.jsp</result>
+        </action>
+        <action name="loginShow" class="com.example.strust2demo.LoginShowAction">
+            <result name="success">/WEB-INF/jsp/show.jsp</result>
+        </action>
+    </package>
+</struts>
